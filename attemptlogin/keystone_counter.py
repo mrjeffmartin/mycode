@@ -8,7 +8,7 @@ for i in range(len(keystone_file_lines)):
     if "- - - - -] Authorization failed" in keystone_file_lines[i]:
         loginfail += 1 # this is the same as loginfail = loginfail + 1
         tline = keystone_file_lines[i]
-        temp, ipaddress = tline.split('from')
+        temp, ipaddress = tline.split('from')  ##split creates 2 variables One before and one after the text in quotes
         print('A login failed from IP address:' + ipaddress)
 
     elif " -] Authorization failed" in keystone_file_lines[i]:
